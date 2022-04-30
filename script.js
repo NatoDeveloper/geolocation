@@ -7,9 +7,7 @@ function appendLocation(location, verb) {
   newLocation.innerHTML = 'Location ' + verb + ': ' + location.coords.latitude + ', ' + location.coords.longitude + '';
   target.appendChild(newLocation);
 }
-function funcao1(){
-    alert  
-}
+
 if ('geolocation' in navigator) {
   document.getElementById('askButton').addEventListener('click', function () {
     navigator.geolocation.getCurrentPosition(function (location) {
@@ -18,4 +16,5 @@ if ('geolocation' in navigator) {
     watchId = navigator.geolocation.watchPosition(appendLocation);
   });
 } else {
-  target.innerText = 'Geolocation API not supported.';}
+  target.innerText = 'Geolocation API not supported.';
+}
